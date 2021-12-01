@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   <link rel="stylesheet" href="/static/style.css" type="text/css">
+
+</head>
+<body style="background-color:powderblue;">
+  <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #fd9e14;">
+        <div class="container-fluid">
+                <img src="/static/logo1.png" height="75" alt="CoolBrand">
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+
+                    <h5 align="right" class="nav-item nav-link ">Manage Customer details</h5>
+
+                    <div style = "position:relative; left:710px; top:2px;">
+                        <ul>
+
+                            <a href="/adminhome" class="nav-item nav-link ">Admin Page</a>
+
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </nav>
+  <div class="row justify-content-center align-items-center h-100">
+	      <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+<form action="/updatecustomerdetails1" method="POST" class=" form-group green-border-focus md-form">
+ 	        <label class="mb-2" >Name</label>
+			<input type="text" name="one" class="login"  placeholder="name" width="330px"  ><br>
+
+			<label class="mb-2" >Mobile Number</label>
+			<input type="number" size="10" name="two" class="login"  placeholder="contact" width="330px"  ><br>
+
+	        <label class="mb-2" >Email ID</label>
+			<input type="email" name="three" class="login"  placeholder="email" width="330px" required><br>
+
+<button type="submit" class="btn btn-info btn-rounded">Update</button>
+
+ </form>
+	  </div>
+		  </div></div></div>
+</body>
+</html>

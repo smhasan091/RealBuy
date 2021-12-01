@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Price Comparison Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body style="background-color:powderblue;">
+
+    <nav class="navbar navbar-light navbar-expand-lg " style="background-color: #fd9e14;">
+        <div class="container-fluid">
+                <img src="/static/logo1.png" height="75" alt="CoolBrand"> </div>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul>
+                <li>
+                    <a href="/protected" class="nav-item nav-link ">Home</a>
+                </li>
+            </ul>
+
+             </div>
+
+    </nav>
+
+
+</section>
+  <div class="table-users">
+   <div class="header fs-1 h-100 d-inline-block bg-success p-2 text-light bg-opacity-50"  align="center">Flipkart Prices</div>
+
+   <table cellspacing="18" cellpadding="15" width="70%">
+      <tr >
+         <th >Product</th>
+         <th >Product Spec</th>
+         <th style="text-align: center;padding-left: 0px;" >Product Price</th>
+<!--         <th>Percentage Discount</th>-->
+      </tr>
+         {% for price in prices %}
+      <tr>
+          <td>{{price['Product']}}</td>
+         <td>{{price['ProductSpec']}}</td>
+         <td>{{price['ProductPrice']}}</td>
+<!--          <td>{{price['_id']}}</td>-->
+          {% set my_string = '/addtocart?id='~ price['_id'] %}
+<!--          <td>{{my_string}}</td>-->
+          <td><Button class="btn btn-secondary btn-lg disabled"><a href="{{my_string}}">Add to Cart</a></Button></td>
+         <!--<td>{{price['PercentOff']}}</td>-->
+
+       {% endfor %}
+   </table>
+</div>
+
+<div class="table-users">
+   <div class="header fs-1 h-100 d-inline-block bg-success p-2 text-light bg-opacity-50"  align="center">PayTM Mall Prices</div>
+
+   <table cellspacing="18" cellpadding="15" width="70%">
+      <tr>
+         <th>Product</th>
+         <th>Product Spec</th>
+         <th style="text-align: left;padding-left: 0px;" >Product Price</th>
+<!--         <th>Percentage Discount</th>-->
+
+      </tr>
+         {% for price in prices1 %}
+      <tr>
+          <td>{{price['Product']}}</td>
+         <td>{{price['ProductSpec']}}</td>
+         <td>{{price['ProductPrice']}}</td>
+          {% set my_string = '/addtocart?id='~ price['_id'] %}
+<!--         <td>{{price['PercentOff']}}</td>-->
+         <td><Button class="btn btn-secondary btn-lg disabled"><a href="{{my_string}}">Add to Cart</a></Button></td>
+       {% endfor %}
+   </table>
+</div>
+
+
+
+</body>
+
+</html>

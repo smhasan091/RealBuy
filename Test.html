@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Nihar</title>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<style type="text/css">
+	@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap');
+	body {
+		margin: auto;
+		box-sizing: border-box;
+		padding: auto;
+		font-family: 'Shippori Antique', sans-serif;
+	}
+	.logo {
+		    padding: 20px;
+            width: 10%;
+          }
+    .overlay {
+             position: fixed;
+             top: 0;
+             bottom: 0;
+             left: 0;
+             right: 0;
+             z-index: 99999;
+             background: rgba(0, 0, 0, 0.75);
+             transition: opacity 500ms;
+             visibility: hidden;
+             opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 0px;
+  width: max-content;
+  top: 2%;
+  position: relative;
+  transition: all 2s ease-in-out;
+}
+.popup .close {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+label {
+	padding: 10px 0px 10px 0px;
+}
+h1 {
+	text-align: center;
+}
+	header {
+			background: #598ec1;
+			box-sizing: border-box;
+			display: flex;
+			text-align: center;
+			justify-content: space-between;
+			font-family: 'Shippori Antique', sans-serif;
+		}
+		ul {
+			display: flex;
+			text-decoration: none;
+			list-style: none;
+			font-family: 'Shippori Antique', sans-serif;
+		}
+		li {
+			padding: 10px;
+			font-family: 'Shippori Antique', sans-serif;
+		}
+		a {
+			text-decoration: none;
+			color: #000;
+		}
+		form {
+			    display: inline-grid;
+			    margin-left: auto;
+    margin-right: auto;
+		}
+		.login {
+	border-radius: 5px;
+    outline: none;
+    width: 350px;
+    height: 40px;
+    margin: auto;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 23%);
+    border: none;
+		}
+button {
+	background: #598ec1;
+	color: #fff;
+	border: none;
+	padding: 10px;
+}
+.mb-5 {
+	border-radius: 5px;
+    width: 50%;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 23%);
+    outline: none;
+    height: 30px;
+    margin: auto;
+    border: none;
+}
+.logo {
+		    padding: 20px;
+            width: 10%;
+          }
+	</style>
+</head>
+<body>
+<header>
+	<img src="/static/logo.jpeg" class="logo">
+	<input type="text" name="text" class="mb-5" placeholder="Search">
+	<ul>
+		<li><a href="/Signin">Sign In</a></li>
+		<li><a href="/Login" >Sign Up</a></li>
+		<li><a href="manageaccount.html">Manage Account</a></li>
+		<li><a href="#"><ion-icon name="cart-outline"></ion-icon> Cart</a></li>
+	</ul>
+</header>
+<div id="ppp" ></div>
+
+
+
+</body>
+</html>

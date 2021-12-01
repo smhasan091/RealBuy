@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>HTML textarea Tag</title>
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   <link rel="stylesheet" href="/static/style.css" type="text/css">
+   </head>
+
+<body style="background-color:powderblue;">
+
+    <nav class="navbar navbar-light navbar-expand-lg " style="background-color: #fd9e14;">
+        <div class="container-fluid">
+                <img src="/static/logo1.png" height="75" alt="CoolBrand">
+             </div>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav align-end">
+
+                    <ul><li><a href="/protected" class="nav-item nav-link">Home</a></li></ul>
+                </div>
+            </div>
+    </nav>
+      {% with messages = get_flashed_messages() %}
+          <p>{{ messages[0] }}</p>
+    {% endwith %}
+      <form action = "/save" method = "POST" align="center">
+       <h5> Dear RealBuy customer, Please advice what improvements can RealBuy work on?</h5>
+         <br>
+         <textarea rows = "5" cols = "100" name = "description">
+
+         </textarea><br>
+         <input type = "submit" value = "submit" />
+      </form>
+   </body>
+</html>

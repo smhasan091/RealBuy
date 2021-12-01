@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real Buy Feedback</title>
+    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   <link rel="stylesheet" href="/static/style.css" type="text/css">
+
+</head>
+<body style="background-color:powderblue;">
+
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #fd9e14;">
+        <div class="container-fluid">
+                <img src="/static/logo1.png" height="75" alt="CoolBrand">
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+
+               <h3 align="center">Feed back from the Customers</h3>
+                <div style = "position:relative; left:575px; top:2px;">
+                    <ul>
+
+                        <a href="/adminhome" class="nav-item nav-link ">Admin Page</a>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+<table  class="table">
+    <tr class="thead-dark">
+
+        <th>Email-ID</th>
+        <th>Feedback message from Customer</th>
+    </tr>
+    {% for prod in userdata %}
+    <tr>
+
+        <td>{{prod['email']}}</td>
+        <td>{{prod['feedback']}}</td>
+    </tr>
+   {% endfor %}
+<!--<% for i in userdata %>-->
+<!-- {{table|safe}}-->
+<!--<%endfor%>-->
+    </table>
+
+
+
+
+<!-- {% for prod in userdata %}-->
+
+<!--                <h1>{{prod['email']}}</h1>-->
+<!--                <h1>{{prod['feedback']}}</h1>-->
+<!--   {% endfor %}-->
+</body>
+</html>

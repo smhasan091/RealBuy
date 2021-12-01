@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RealBuy: View Cart</title>
+    <link href="static/style.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body style="background-color:powderblue;">
+
+    <nav class="navbar navbar-light navbar-expand-lg " style="background-color: #fd9e14;">
+        <div class="container-fluid">
+                <img src="/static/logo1.png" height="75" alt="CoolBrand"> </div>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul>
+                <li>
+                    <a href="/protected" class="nav-item nav-link ">Home</a>
+                </li>
+            </ul>
+
+             </div>
+<!--            -->
+<!--                <div class="navbar-nav">-->
+<!--                    -->
+<!--                </div>-->
+<!--            </div>-->
+
+    </nav>
+
+<!--    <div>-->
+<!--        <ul>-->
+<!--            <li><a href="/protected">Home</a></li>-->
+<!--            &lt;!&ndash;		<li><a href="#">Manage Account</a></li>&ndash;&gt;-->
+<!--            &lt;!&ndash;		<li><a href="#"><ion-icon name="cart-outline"></ion-icon> Cart</a></li>&ndash;&gt;-->
+<!--        </ul>-->
+<!--    </div>-->
+    {% if lt %}}
+ {% for prod in lt %}
+<section class="main">
+    <div class="container">
+
+
+        <div class="card">
+
+            <div style="width:-webkit-fill-available">
+                <h1>Product Name:{{prod['Product']}}</h1>
+                <h1>Product Spec:{{prod['ProductSpec']}}</h1>
+                 <h1>Product Price:{{prod['ProductPrice']}}</h1>
+                <h1>Product Seller:{{prod['Seller']}}</h1>
+
+                {% set my_string = '/deletecart?id='~ prod['_id'] %}
+                <button class="cart">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <a href={{my_string}}>
+                        Delete from Cart</a>
+                </button>
+
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+</section>
+   {% endfor %}
+    {% endif%}
+
+</body>
+</html>

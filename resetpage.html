@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>RealBuy: Forget Password</title>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+      body {
+        font-family: "Roboto", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* nav Changes */
+      nav {
+        height: 70px;
+      }
+
+      .login-page {
+        width: 360px;
+        padding: 8% 0 0;
+        margin: auto;
+      }
+      .main_forgot_wrapper {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background: cornflowerblue;
+        height: 100vh;
+      }
+      .main_forgot_wrapper .left_reset_pass_img img {
+        width: 40vw;
+      }
+      .main_forgot_wrapper .right_reset_pass_form .form {
+        display: flex;
+        flex-direction: column;
+        width: 28vw;
+        background: #ffffff;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2),
+          0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        padding: 1.5rem 2rem;
+        border-radius: 10px;
+      }
+      .main_forgot_wrapper .right_reset_pass_form .form input {
+        height: 40px;
+        width: 23vw;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        background: #539bfb4a;
+        margin: 1rem 0;
+      }
+      .main_forgot_wrapper .right_reset_pass_form .form input::placeholder {
+        padding: 0 1rem;
+      }
+      .main_forgot_wrapper .right_reset_pass_form .form select {
+        height: 40px;
+        width: 23vw;
+        background: #6278f9e6;
+        color: white;
+        border-radius: 8px;
+        border: none;
+        outline: 2px solid #539bfb4a;
+        padding: 0 1rem;
+      }
+      .main_forgot_wrapper .right_reset_pass_form .form label {
+        margin-bottom: 0px;
+        padding: 0px;
+        font-weight: 500;
+        font-size: 1.2rem;
+      }
+      .main_forgot_wrapper .right_reset_pass_form .form button {
+        width: 23vw;
+        height: 40px;
+        border: none;
+        border-radius: 30px;
+        background: #00ac61;
+        color: white;
+        text-transform: capitalize;
+      }
+      .main_forgot_wrapper .right_reset_pass_form .form .reset_logo {
+        text-align: center;
+      }
+      .main_forgot_wrapper .right_reset_pass_form .form .reset_logo img {
+        width: 10vw;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/static/style.css" type="text/css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light"
+      style="background-color: #fd9e14"
+    >
+      <div class="container-fluid">
+        <img src="/static/logo1.png" height="75" alt="CoolBrand" />
+      </div>
+    </nav>
+    <div class="main_forgot_wrapper">
+      <div class="left_reset_pass_img">
+        <img src="../static/forgot_Password.svg" alt="Forgot Password Image" />
+      </div>
+      <div class="right_reset_pass_form">
+        <form class="form" method="POST" action="/forgotpassword1">
+          <div class="reset_logo">
+            <img src="../static/logo1.png" alt="" />
+          </div>
+          <h3 class="text-center">FORGOT PASSWORD</h3>
+          <label>Username</label>
+
+          <input
+            type="email"
+            name="username"
+            placeholder="enter your username"
+          />
+          <!-- <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton2"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Security Question?
+            </button>
+            <ul
+              class="dropdown-menu dropdown-menu-dark"
+              aria-labelledby="dropdownMenuButton2"
+            >
+              <li>
+                <a class="dropdown-item active" href="a.html"
+                  >What's Your Favourite Pet.</a
+                >
+              </li>
+            </ul>
+          </div> -->
+          <select>
+            <option selected disabled>Security Question?</option>
+            <option value="1">What's Your Favourite Pet</option>
+            <option value="2">What's Your Favourite Movie name</option>
+          </select>
+          <input type="text" name="five" placeholder="Dog" />
+
+          <label>Please New Password</label>
+          <input
+            type="Password"
+            name="four"
+            placeholder="Password"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+            required
+          />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap');
+label {
+	padding: 10px 0px 10px 0px;
+}
+	header {
+			background: #598ec1;
+			box-sizing: border-box;
+			display: flex;
+			text-align: center;
+			justify-content: space-between;
+			font-family: 'Shippori Antique', sans-serif;
+		}
+		ul {
+			display: flex;
+			text-decoration: none;
+			list-style: none;
+			font-family: 'Shippori Antique', sans-serif;
+		}
+		li {
+			padding: 10px;
+			font-family: 'Shippori Antique', sans-serif;
+		}
+		a {
+			text-decoration: none;
+			color: #000
+			;
+		}
+
+		.login {
+	border-radius: 5px;
+    outline: none;
+    width: 350px;
+    height: 40px;
+    margin: auto;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 23%);
+    border: none;
+		}
+.btn {
+	background: #598ec1;
+	color: #fff;
+	border: none;
+	padding: 10px;
+}
+.mb-5 {
+	  border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 23%);
+    outline: none;
+    height: 30px;
+    margin: auto;
+    border: none;
+}
+.searchbar {
+    margin: auto;
+    width: 40vw;
+    outline: none;
+    margin: auto;
+    border: none;
+}
+.click {
+
+    padding: 0px 20px;
+    background: #598EC1;
+    border: none;
+    color: #FFF;
+
+}
+.card {
+		border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 23%);
+    border: none;
+    width: 80%;
+    padding-left:10px
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cart {
+  	background: #ff9f00;
+  	color: #fff;
+  	border: none;
+  	padding: 10px;
+  	float: right;
+  	border-radius: 3px;
+  	margin: 15px;
+  }
+.main {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+.image {
+	max-width: 130px;
+	max-height: 130px;
+}
+.container{
+display:flex;
+flex-direction:column;
+
+}
+
+.searchcenter
+{
+ position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+header,main,footer {
+  padding-left: 240px;
+}
+
+body1 {
+  backgroud: white;
+}
+
+@media only screen and (max-width: 992px) {
+  header,
+  main,
+  footer {
+    padding-left: 0;
+  }
+}
+
+#credits li,
+#credits li a {
+  color: white;
+}
+
+#credits li a {
+  font-weight: bold;
+}
+
+.footer-copyright .container,
+.footer-copyright .container a {
+  color: #BCC2E2;
+}
+
+.fab-tip {
+  position: fixed;
+  right: 85px;
+  padding: 0px 0.5rem;
+  text-align: right;
+  background-color: #323232;
+  border-radius: 2px;
+  color: #FFF;
+  width: auto;
+}

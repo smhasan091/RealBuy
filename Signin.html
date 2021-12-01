@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+</head>
+<body>
+
+    <form class="form" method="POST" action="/login">
+        <label>USERNAME:</label><br>
+        <input type="email" name="username" placeholder="enter your username"><br><br>
+        <label>PASSWORD:</label><br>
+        <input type="password" name="password" placeholder="enter your password"><br><br>
+        <input type="submit" value="LOGIN">
+    </form>
+
+<div>
+    <form action="/new">
+        <label>New Here?</label>
+        <a href="{{url_for('register')}}">register page</a>
+        <input value="Register" type="submit" >
+    </form>
+</div>
+</body>
+</html>
